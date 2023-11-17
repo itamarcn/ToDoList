@@ -1,6 +1,6 @@
-# Task Management Application
+# To Do List Management Application
 
-This is a Task Management Application with a frontend and backend built using Angular and NestJS.
+This is a To Do List Management Application with a frontend and backend built using Angular, NestJS, mongoDB, Socket.io.
 
 ## Prerequisites
 
@@ -25,12 +25,7 @@ Create a `.env` file based on `.env.example` and set your environment variables.
 4. Run the Backend Server:
 npm start
 
-The server will start at `http://localhost:5000`.
-
-5. Running Tests:
-
-To run tests for the backend, use the following command:
-npm run test
+The server will start at `http://localhost:3000`.
 
 ## Frontend Setup
 
@@ -41,12 +36,12 @@ cd frontend
 npm install
 
 3. Run the Frontend Development Server:
-ng serve
+npm start
 
 The frontend will be accessible at `http://localhost:4200`.
 
 ## Usage
 
 - Access the frontend application at `http://localhost:4200` in your web browser.
-- Use the Task Management Application to create, manage, and complete tasks.
+- Use the To Do List Management Application to create, edit, and complete tasks.
 - The backend API is available at `http://localhost:5000` and serves as the data source for the frontend.
