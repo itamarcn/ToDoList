@@ -1,0 +1,25 @@
+<div class="table-container">
+    <table class="tasks-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let task of tasks">
+                <td>{{ task.title }}</td>
+                <td>{{ task.description }}</td>
+                <td>{{ task.status === taskStatusType.DONE ? 'Done' : 'Open' }}</td>
+                <td>
+                    <button (click)="openCreateTaskModal(task)">Edit</button>
+                    <button (click)="deleteTask(task)">Delete</button>
+                    <button *ngIf="task.status === taskStatusType.OPEN" (click)="markTaskAsDone(task)">Done</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="add-task-button" (click)="openCreateTaskModal()">Add Task</button>
+</div>
